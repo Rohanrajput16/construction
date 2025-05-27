@@ -1,0 +1,12 @@
+:root {
+  --themeMain: #0b2b42;
+  --secondColor: #ff832b;
+  --firstText: #fff;
+  --secondText: #000;
+  --grayBg: #f8f8f8;
+  --specialPrice :#cc0c39;
+  --success:#23e923; 
+  --sidecolor:#6F6AF8 ;
+}
+
+/* var(--themeMain) */
