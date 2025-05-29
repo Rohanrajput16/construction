@@ -1,13 +1,13 @@
-name: firstWorkflow
+name: scheduled_workflow
 
 on:
-  push:
-    branches: [ main ]
+  schedule:
+    - cron: "0 0 * * *"
 
-jobs: 
-  demo: 
+jobs:
+  run-script:
     runs-on: ubuntu-latest
 
-    steps: 
-      - name: Greeting
-        run: echo "hello world"
+    steps:
+      - name: Print Message
+        run: echo "Your first scheduled workflow ran successfully"
