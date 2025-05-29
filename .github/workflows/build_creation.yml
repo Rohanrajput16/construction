@@ -1,0 +1,22 @@
+name: second_workflow
+
+on:
+  push: 
+    branches: [ main ]
+
+jobs:
+  buil-react-app:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - name: chang_version
+        uses: actions/setup-node@v3.9.1
+      - name: setup_node_js
+        uses: actions/setup-node@v3.9.1
+        with:
+          node-version: 22.x
+      - name: install dependencies
+        run: npm install
+      - name: create_build
+        run: npm run build
