@@ -1,0 +1,27 @@
+name: creating new build
+
+on:
+  push:
+    branches: [ main  ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: install dependecies
+        working-directory: client
+        run: npm install
+
+      - name: build creation
+        working-directory: client
+        run: npm run build
+
+      - name: upload build on arifacts
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: react.js build
+          path: out/
