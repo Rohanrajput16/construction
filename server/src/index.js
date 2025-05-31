@@ -56,6 +56,6 @@ if (isProduction) {
     res.sendFile(resolve(__dirname, '../..', 'client', 'build', 'index.html')); // index is in /server/src so 2 folders up
   });
 }
-
+ 
 const port = process.env.PORT || 5000;
   app.listen(port, () => console.log(`Server started on port ${port}`));   
